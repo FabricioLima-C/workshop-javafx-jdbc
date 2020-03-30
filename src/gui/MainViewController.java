@@ -54,6 +54,7 @@ public class MainViewController implements Initializable{
 	// Multi thread e função genérica
 	private synchronized <T> void loadView(String absoluteName, Consumer<T> initializingAction) {
 		try {
+			//AbosluteName recebe o nome do arquivo que sera aberto
 			FXMLLoader loader = new FXMLLoader(getClass().getResource(absoluteName));
 			VBox newVbox = loader.load();
 			
@@ -69,6 +70,7 @@ public class MainViewController implements Initializable{
 			//adiciono todos os filhos da nova view
 			mainVBox.getChildren().addAll(newVbox.getChildren());
 			
+			// as duas linhas abaxio, executa a função parametrizada como argumento na função
 			T controller = loader.getController();
 			initializingAction.accept(controller);
 			
