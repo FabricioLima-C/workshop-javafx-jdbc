@@ -1,6 +1,7 @@
 package gui;
 
 import java.net.URL;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 import java.util.ResourceBundle;
@@ -40,6 +41,12 @@ public class SellerListController implements Initializable, DataChangeListener {
 	@FXML
 	private TableColumn<Seller, String> tableColumnName;
 	@FXML
+	private TableColumn<Seller, String> tableColumnEmail;
+	@FXML
+	private TableColumn<Seller, Date> tableColumnBirthDate;
+	@FXML
+	private TableColumn<Seller, Double> tableColumnBaseSalary;
+	@FXML
 	private TableColumn<Seller, Seller> tableColumnEdit;
 	@FXML
 	private TableColumn<Seller, Seller> tableColumnRemove;
@@ -63,6 +70,11 @@ public class SellerListController implements Initializable, DataChangeListener {
 		//padrão do javafx para inicializar as colunas
 		tableColumnId.setCellValueFactory(new PropertyValueFactory<>("id"));
 		tableColumnName.setCellValueFactory(new PropertyValueFactory<>("name"));
+		tableColumnEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+		tableColumnBirthDate.setCellValueFactory(new PropertyValueFactory<>("birthDay"));
+		Utils.formatTableColumnDate(tableColumnBirthDate, "dd/MM/yyyy");
+		tableColumnBaseSalary.setCellValueFactory(new PropertyValueFactory<>("salary"));
+		Utils.formatTableColumnDouble(tableColumnBaseSalary, 2);
 		// getWindow pega a referência da janela, ele é uma superClasse do Stage
 		Stage stage = (Stage) Main.getMainScene().getWindow();
 		//macete para fazer a tableview acompanhar o tamanho da tela
