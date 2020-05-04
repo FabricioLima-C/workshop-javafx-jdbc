@@ -46,6 +46,16 @@
                <GridPane.margin>
                   <Insets bottom="10.0" top="10.0" />
                </GridPane.margin></TextField>
+            <TextField fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtBaseSalary" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </GridPane.margin>
+            </TextField>
             <Label fx:id="labelErrorName" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets bottom="10.0" left="10.0" top="10.0" />
@@ -71,16 +81,6 @@
                   <Insets bottom="10.0" left="10.0" top="10.0" />
                </GridPane.margin>
             </Label>
-            <TextField fx:id="txtEmail" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets bottom="10.0" top="10.0" />
-               </GridPane.margin>
-            </TextField>
-            <TextField fx:id="txtBaseSalary" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <GridPane.margin>
-                  <Insets bottom="10.0" top="10.0" />
-               </GridPane.margin>
-            </TextField>
             <Label fx:id="labelErrorEmail" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <GridPane.margin>
                   <Insets bottom="10.0" left="10.0" top="10.0" />
